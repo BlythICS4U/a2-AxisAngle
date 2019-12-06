@@ -1,0 +1,7 @@
+The file myText.txt was successfully read.
+
+Number of words:     138  
+Number of lines:     3    
+Longest word:        object-oriented
+Longest word length: 15   
+Average word length: 5.1  
