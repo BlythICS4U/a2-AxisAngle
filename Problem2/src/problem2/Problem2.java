@@ -30,7 +30,7 @@ public class Problem2 {
         return input;
     }
     public static boolean[] initializeArray(int size) {
-        boolean[] array = new boolean[size];
+        boolean[] array = new boolean[size+1];
         Arrays.fill(array, true);
         return array;
     }
@@ -41,11 +41,11 @@ public class Problem2 {
                 array[i] = false;
                 break;
             }
-            if (array[i-1] == true) {
+            if (array[i] == true) {
                 int a = 0;
                 int j = (int) (i*i);
                 while (j < array.length) {
-                    array[j-1] = false;
+                    array[j] = false;
                     j = (int) (i*i) + a * i;
                     a++;
                 }
@@ -59,9 +59,9 @@ public class Problem2 {
         {
             System.out.println(2); //Another cheap way of getting around an exception
         }
-        for (int i = 1; i < printArray.length-1; i++) {
+        for (int i = 2; i < printArray.length-1; i++) {
             if (printArray[i] == true) {
-                System.out.print((i+1) + "\t");
+                System.out.print((i) + "\t");
                 newLine++;
                 if (newLine % 10 == 0) {
                 System.out.println();

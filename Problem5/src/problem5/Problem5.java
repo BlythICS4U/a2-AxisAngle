@@ -14,6 +14,9 @@ public class Problem5 {
     public static void main(String[] args) {
         String test = readTextFile("Teacher Data.txt");
         String[][] teacherData = textIntoArray(test);
+        double math = findValueAndReturnAverage("math", teacherData);
+        double science = findValueAndReturnAverage("science", teacherData);
+        double tech = findValueAndReturnAverage("tech", teacherData);
         System.out.print("Average  teaching experience for math is: ");
         System.out.printf("%.2f%n", findValueAndReturnAverage("math", teacherData));
         
@@ -23,8 +26,6 @@ public class Problem5 {
         System.out.print("Average  teaching experience for tech is: ");
         System.out.printf("%.2f%n", findValueAndReturnAverage("tech", teacherData));
         
-        //System.out.print("Average teaching experience for math, science and tech is: ");
-        //System.out.printf("%.2f", (findValueAndReturnAverage("math", teacherData) + findValueAndReturnAverage("science", teacherData) + findValueAndReturnAverage("tech", teacherData))/3);
     }
 
     public static String readTextFile(String fileName) {
