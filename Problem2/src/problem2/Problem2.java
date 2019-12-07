@@ -23,10 +23,6 @@ public class Problem2 {
         Scanner keyboard = new Scanner(System.in);
         System.out.print("Enter a number: ");
         int input = keyboard.nextInt();
-        if (input <= 0)
-        {
-            input = 1; //Exception if number is less than 0 
-        }
         return input;
     }
     public static boolean[] initializeArray(int size) {
@@ -36,11 +32,6 @@ public class Problem2 {
     }
     public static void algorithm(boolean[] array) {
         for (int i = 2; i <= Math.floor(Math.sqrt(array.length)); i++) {
-            if(array.length < 2)
-            {
-                array[i] = false;
-                break;
-            }
             if (array[i] == true) {
                 int a = 0;
                 int j = (int) (i*i);
@@ -55,11 +46,7 @@ public class Problem2 {
     public static void printArray(boolean[] printArray, int size) {
         int newLine = 0;
         System.out.println("All primes less than or equal to " + size + " are:");
-        if(printArray.length == 2)
-        {
-            System.out.println(2); //Another cheap way of getting around an exception
-        }
-        for (int i = 2; i < printArray.length-1; i++) {
+        for (int i = 2; i < printArray.length; i++) {
             if (printArray[i] == true) {
                 System.out.print((i) + "\t");
                 newLine++;

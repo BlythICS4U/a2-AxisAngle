@@ -33,15 +33,13 @@ public class Problem4 {
         StringBuilder reval = new StringBuilder();
         try {
             readFile = new BufferedReader(new FileReader(fileName));
-            String contentLine = readFile.readLine();
+            String contentLine = "";
             System.out.println("Currently reading file.......");
-            lines++;
-            reval.append(contentLine);
+           
             while ((contentLine = readFile.readLine()) != null) {
+                 lines++;
                 reval.append(contentLine);
                 reval.append(" ");
-            
-                lines++;
             }
         } catch (IOException ioe) {
             ioe.printStackTrace(System.out);
